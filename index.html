@@ -20,9 +20,16 @@
     <div class="login">
         <div class="container">
             <h1>Log In</h1>
-            <form action="#">
-                <input type="email" name="email" id="email" placeholder="Email" required>
-                <input type="password" name="password" id="pwd" placeholder="Password" required>
+            <form action="./action.php" name="myForm" onsubmit="return validateForm()" method="post">
+                <div id="mail">
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                <b><span class="error"></span></b>
+                </div>
+                <div id="pass">
+                    <input type="password" name="pass" id="pwd" placeholder="Password" required>
+                <b><span class="error"></span></b>
+                </div>
+                
                 <input onclick="mysubmit(this)" type="submit" id="submit">
                 <a href="#">Forgot Password?</a>
 
